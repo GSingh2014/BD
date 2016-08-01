@@ -21,7 +21,7 @@ def index():
     print (args) # For debugging
     no1 = args['key1']
     no2 = args['key2']
-    searchUrl = 'http://mcp-bld-lnx-330:8986/solr/cisco.cdetsdetails/select?q=*%3A*&fl=*&wt=json&indent=true'
+    searchUrl = 'http://localhost:8986/solr/cisco.cdetsdetails/select?q=*%3A*&fl=*&wt=json&indent=true'
     try:
         with urllib.request.urlopen(searchUrl) as response:
             res = response.read()
